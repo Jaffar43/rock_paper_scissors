@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Random Quizzing Game</title>
+  </head>
+  <body>
+    <div id="startScreen">
+      <h1>Random Quiz</h1>
+      <button id="startButton" class="start-button">Start the Game</button>
+    </div>
+    <div class="container" id="quizContainer" style="display: none">
+      <div id="quizzing" class="centered">
+        <div id="timer">15</div>
+        <h2 id="question" class="hsg"></h2>
+        <!-- hsg is Headline Secondary Grouped -->
+        <h4 id="score">Score 0</h4>
+
+        <div class="optionContainer">
+          <p id="choice0"></p>
+          <button id="guess0" class="buttonDefault">Select</button>
+        </div>
+
+        <div class="optionContainer">
+          <p id="choice1"></p>
+          <button id="guess1" class="buttonDefault">Select</button>
+        </div>
+
+        <div class="optionContainer">
+          <p id="choice2"></p>
+          <button id="guess2" class="buttonDefault">Select</button>
+        </div>
+
+        <div class="optionContainer">
+          <p id="choice3"></p>
+          <button id="guess3" class="buttonDefault">Select</button>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="doublePoints" class="helpButton">2X</button>
+        <button id="removeTwo" class="helpButton">50-50</button>
+        <button id="stopTimer" class="helpButton">Stop Timer</button>
+        <button id="restart" class="restartButton">Restart</button>
+      </div>
+    </div>
+  </body>
+</html>

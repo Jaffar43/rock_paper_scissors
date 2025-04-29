@@ -1,0 +1,43 @@
+ Begin Random_Quizzing_Game
+
+  // Initialize variables
+  questions_list - Load questions from database or file
+  total_questions - Set number of questions per game
+  score - 0
+  current_question - 0
+
+  // Function to start the quiz
+  function  StartQuiz()
+    display "Welcome to the Quiz!"
+    for each question in total_questions
+      call AskQuestion()
+    
+    call ShowResults()
+  
+
+  // Function to ask a question
+  function  AskQuestion()
+    select random_question FROM questions_list
+    display random_question.text
+    user_answer - get user input
+    call CheckAnswer(user_answer, random_question.correct_answer)
+  
+
+  // Function to check the answer
+  function CheckAnswer(user_answer, correct_answer)
+    if user_answer = correct_answer THEN
+      display "Correct!"
+      score - score + 1
+    else
+      display "Incorrect!"
+  
+    current_question - current_question + 1
+  
+
+  // Function to display final results
+  function ShowResults()
+    display "Quiz Completed!"
+    display "Your final score: ", score, " out of ", total_questions
+  
+
+end Random_Quizzing_Game
